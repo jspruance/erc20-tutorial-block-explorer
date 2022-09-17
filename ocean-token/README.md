@@ -1,13 +1,4 @@
-# Sample Hardhat Project
+# ERC20 Token Tutorial
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+This is the source code for the Block Explorer YouTube video:
+https://www.youtube.com/watch?v=gc7e90MHvl8
