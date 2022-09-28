@@ -27,7 +27,7 @@ function App() {
         setSigner(provider.getSigner());
         /* local contract instance */
         setFcContract(faucetContract(provider));
-   
+        /* set active wallet address */
         setWalletAddress(accounts[0]);
       } catch (err) {
         console.error(err.message);
@@ -50,10 +50,10 @@ function App() {
           setSigner(provider.getSigner());
           /* local contract instance */
           setFcContract(faucetContract(provider));
-          
+          /* set active wallet address */
           setWalletAddress(accounts[0]);
         } else {
-          console.log("Connect to MetaMask using the Connect button");
+          console.log("Connect to MetaMask using the Connect Wallet button");
         }
       } catch (err) {
         console.error(err.message);
