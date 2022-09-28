@@ -27,9 +27,8 @@ function App() {
         setSigner(provider.getSigner());
         /* local contract instance */
         setFcContract(faucetContract(provider));
-
+   
         setWalletAddress(accounts[0]);
-        console.log(accounts[0]);
       } catch (err) {
         console.error(err.message);
       }
@@ -51,8 +50,8 @@ function App() {
           setSigner(provider.getSigner());
           /* local contract instance */
           setFcContract(faucetContract(provider));
+          
           setWalletAddress(accounts[0]);
-          console.log(accounts[0]);
         } else {
           console.log("Connect to MetaMask using the Connect button");
         }
@@ -69,7 +68,6 @@ function App() {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
       window.ethereum.on("accountsChanged", (accounts) => {
         setWalletAddress(accounts[0]);
-        console.log(accounts[0]);
       });
     } else {
       /* MetaMask is not installed */
@@ -84,11 +82,9 @@ function App() {
     try {
       const fcContractWithSigner = fcContract.connect(signer);
       const resp = await fcContractWithSigner.requestTokens();
-      console.log(resp);
       setWithdrawSuccess("Operation succeeded - enjoy your tokens!");
       setTransactionData(resp.hash);
     } catch (err) {
-      console.error(err.message);
       setWithdrawError(err.message);
     }
   };
