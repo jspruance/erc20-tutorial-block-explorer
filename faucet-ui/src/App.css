@@ -54,3 +54,11 @@ body {
 .faucet-hero-body {
   margin-top: 100px;
 }
+
+.withdraw-error {
+  color: red;
+}
+
+.withdraw-success {
+  color: green;
+}
