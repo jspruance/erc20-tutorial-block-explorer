@@ -94,7 +94,7 @@ function App() {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-brand">
-            <h1 className="navbar-item is-size-4">Ocean Token (OCT)</h1>
+            <h1 className="navbar-item is-size-4">Lendvest</h1>
           </div>
           <div id="navbarMenu" className="navbar-menu">
             <div className="navbar-end is-align-items-center">
@@ -118,8 +118,8 @@ function App() {
       <section className="hero is-fullheight">
         <div className="faucet-hero-body">
           <div className="container has-text-centered main-content">
-            <h1 className="title is-1">Faucet</h1>
-            <p>Fast and reliable. 50 OCT/day.</p>
+            <h1 className="title is-1">User_Borrow</h1>
+            <p>Fast and reliable</p>
             <div className="mt-5">
               {withdrawError && (
                 <div className="withdraw-error">{withdrawError}</div>
@@ -144,7 +144,7 @@ function App() {
                     onClick={getOCTHandler}
                     disabled={walletAddress ? false : true}
                   >
-                    GET TOKENS
+                    GET AMOUNT
                   </button>
                 </div>
               </div>
