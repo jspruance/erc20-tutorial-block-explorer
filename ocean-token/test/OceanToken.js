@@ -60,7 +60,10 @@ describe("OceanToken contract", function() {
       // `require` will evaluate false and revert the transaction.
       await expect(
         oceanToken.connect(addr1).transfer(owner.address, 1)
-      ).to.be.revertedWith("ERC20: transfer amount exceeds balance");
+      ).to.be.revertedWithCustomError(  // Custom error solving example !!
+        BitCoinV20,
+        "ERC20InsufficientBalance"
+      ).withArgs(addr1, 0, 1);
 
       // Owner balance shouldn't have changed.
       expect(await oceanToken.balanceOf(owner.address)).to.equal(
